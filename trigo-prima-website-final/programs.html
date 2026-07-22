@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program & Layanan | PT. Trigo Prima Universal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="site-header"></div>
+
+    
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Program & Layanan</span>
+            <h1>Solusi untuk <span class="gradient-text">Pendidikan yang Berdampak.</span></h1>
+            <p>Program yang dirancang untuk menjawab kebutuhan sekolah, pendidik, institusi, dan mitra CSR.</p>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            <div class="grid-2">
+                <div class="program-card"><div class="program-icon">💠</div><h3>Bina Karakter Sumba</h3><p>Pendampingan holistik sekolah di Kecamatan Pandawai, Sumba Timur dengan fokus pada karakter, nilai, dan integritas.</p><small>Program Unggulan</small></div>
+                <div class="program-card"><div class="program-icon">📊</div><h3>Sertifikasi & Pelatihan Pendidik</h3><p>Peningkatan kapabilitas guru dan tenaga pendidikan sesuai tuntutan zaman serta standar nasional.</p><small>Pengembangan SDM</small></div>
+                <div class="program-card"><div class="program-icon">📱</div><h3>Inovasi Digital Pendidikan</h3><p>Integrasi EdTech dan metode belajar interaktif untuk meningkatkan efektivitas pembelajaran.</p><small>Teknologi</small></div>
+                <div class="program-card"><div class="program-icon">🏢</div><h3>Leadership & Tata Kelola</h3><p>Pelatihan tata kelola dan kepemimpinan untuk mendorong kemandirian institusi sekolah.</p><small>Organisasi</small></div>
+                <div class="program-card"><div class="program-icon">🤝</div><h3>Konsultasi Pendidikan</h3><p>Pendampingan strategis untuk membantu institusi mengidentifikasi tantangan dan peluang pengembangan.</p><small>Konsultasi</small></div>
+                <div class="program-card"><div class="program-icon">🌱</div><h3>CSR Pendidikan</h3><p>Menjadi mitra pelaksana program CSR pendidikan yang terukur, profesional, dan berdampak.</p><small>Kemitraan</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section case-study">
+        <div class="container split">
+            <div>
+                <span class="badge">Program Unggulan</span>
+                <h2>Bina Karakter Pandawai</h2>
+                <p>Program pendampingan yang dirancang untuk mendukung sekolah dalam membangun generasi yang tidak hanya cerdas secara akademik, tetapi juga kuat dalam karakter dan nilai hidup.</p>
+                <a href="contact.html" class="btn btn-primary">Diskusikan Program</a>
+            </div>
+            <div class="grid-2">
+                <div class="case-image">Foto Kegiatan 1</div>
+                <div class="case-image" style="margin-top:32px;">Foto Kegiatan 2</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container footer-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">T</span>
+                <span>TRIGO<span class="brand-accent">PRIMA</span></span>
+            </a>
+            <p>© 2026 PT. Trigo Prima Universal. Seluruh Hak Cipta Dilindungi.</p>
+            <div class="footer-links">
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('site-header').innerHTML = html;
+
+                const currentPage = 'programs';
+                document.querySelector(`[data-page="${currentPage}"]`)?.classList.add('active');
+
+                const toggle = document.querySelector('.menu-toggle');
+                const links = document.querySelector('.nav-links');
+
+                toggle?.addEventListener('click', () => {
+                    const isOpen = links.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', isOpen);
+                });
+            })
+            .catch(error => console.error('Header gagal dimuat:', error));
+    </script>
+    
+</body>
+</html>

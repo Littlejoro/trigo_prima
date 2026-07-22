@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PT. Trigo Prima Universal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="site-header"></div>
+
+    
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Contact Us</span>
+            <h1>Mari <span class="gradient-text">Berkolaborasi.</span></h1>
+            <p>Hubungi kami untuk membahas kebutuhan program, pelatihan, konsultasi, atau peluang kemitraan CSR pendidikan.</p>
+        </div>
+    </section>
+
+    <section class="section section-light">
+        <div class="container contact-layout">
+            <div>
+                <h2>Hubungi Kami</h2>
+                <p>Tim Trigo Prima siap membantu Anda menemukan solusi yang sesuai dengan kebutuhan organisasi dan institusi.</p>
+
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div><h3>Konsultasi Cepat</h3><p>+62 21-XXX-XXXX</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div><h3>Email Resmi</h3><p>partnership@trigoprima.co.id</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div><h3>Lokasi</h3><p>Alamat kantor dapat ditambahkan di sini.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="institution">Nama Instansi / Perusahaan</label>
+                        <input id="institution" type="text" required placeholder="Masukkan nama lembaga">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required placeholder="nama@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Kebutuhan Program</label>
+                        <select id="program">
+                            <option>Pelatihan Kompetensi Guru</option>
+                            <option>Program Bina Karakter</option>
+                            <option>Kerjasama CSR</option>
+                            <option>Konsultasi Pendidikan</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" placeholder="Bagaimana kami bisa membantu Anda?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Kirim Permintaan Konsultasi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <div id="site-footer"></div>
+
+    <script src="components.js"></script>
+    
+<script>
+    document.getElementById('contactForm')?.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const button = this.querySelector('button');
+        const originalText = button.textContent;
+
+        button.disabled = true;
+        button.textContent = 'Mengirim...';
+
+        setTimeout(() => {
+            alert('Terima kasih! Pesan Anda telah kami terima. Tim Trigo Prima akan segera menghubungi Anda.');
+            this.reset();
+            button.disabled = false;
+            button.textContent = originalText;
+        }, 1000);
+    });
+</script>
+</body>
+</html>

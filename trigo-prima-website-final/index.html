@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | PT. Trigo Prima Universal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="site-header"></div>
+    
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="eyebrow">Membina Generasi Penerus Bangsa</span>
+                <h1>Menyongsong <span class="gradient-text">Indonesia Emas</span><br>Bersama Trigo Prima Universal.</h1>
+                <p>Penyedia layanan peningkatan mutu pendidikan yang profesional, unggul, dan terpercaya. Berlandaskan kasih dan keadilan untuk masa depan yang lebih cerah.</p>
+                <div class="button-row">
+                    <a href="programs.html" class="btn btn-primary">Jelajahi Program</a>
+                    <a href="contact.html" class="btn btn-secondary">Diskusi Kerjasama</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid-3">
+                <div class="card value-card">
+                    <div class="value-icon">K</div>
+                    <h3>Kompeten</h3>
+                    <p>Menjalankan tugas dengan keahlian tinggi dan standar profesionalisme terbaik.</p>
+                </div>
+                <div class="card value-card featured">
+                    <div class="value-icon">K</div>
+                    <h3>Kolaboratif</h3>
+                    <p>Membangun sinergi yang inklusif untuk mencapai tujuan pendidikan bersama.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">B</div>
+                    <h3>Berkomitmen</h3>
+                    <p>Dedikasi penuh terhadap keberlanjutan dan kualitas pengembangan SDM.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Statistik Dampak Nyata</h2>
+                    <p>Transparansi dan hasil nyata adalah fondasi kepercayaan kami kepada seluruh mitra.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="chart-box">
+                        <h3>Cakupan Sektor Mitra</h3>
+                        <div class="chart-container"><canvas id="clientChart"></canvas></div>
+                        <div class="stats">
+                            <div class="stat"><small>Total Sekolah</small><strong>120+</strong></div>
+                            <div class="stat"><small>Pendidik Terlatih</small><strong>2.500+</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-box">
+                        <h3>Pertumbuhan Kapasitas Tahunan</h3>
+                        <div class="chart-container"><canvas id="growthChart"></canvas></div>
+                        <p>Data menunjukkan peningkatan kepercayaan institusi terhadap metodologi pendampingan Trigo Prima dari tahun ke tahun.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="section section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Program & Layanan</h2>
+                    <p>Solusi terintegrasi untuk tantangan pendidikan di era digital dan perubahan karakter bangsa.</p>
+                </div>
+
+                <div class="grid-4">
+                    <div class="program-card"><div class="program-icon">💠</div><h3>Bina Karakter Sumba</h3><p>Pendampingan holistik sekolah di Kec. Pandawai, Sumba Timur.</p><small>Program Unggulan</small></div>
+                    <div class="program-card"><div class="program-icon">📊</div><h3>Sertifikasi Pendidik</h3><p>Peningkatan kapabilitas guru modern sesuai tuntutan zaman.</p><small>Pelatihan</small></div>
+                    <div class="program-card"><div class="program-icon">📱</div><h3>Inovasi Digital</h3><p>Integrasi EdTech dan metode belajar interaktif.</p><small>Teknologi</small></div>
+                    <div class="program-card"><div class="program-icon">🏢</div><h3>Leadership</h3><p>Pelatihan tata kelola dan kepemimpinan institusi sekolah.</p><small>Organisasi</small></div>
+                </div>
+
+                <div class="button-row" style="margin-top:40px;">
+                    <a href="programs.html" class="btn btn-secondary">Lihat Semua Program</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-study">
+            <div class="container split">
+                <div>
+                    <span class="badge">Cerita Lapangan: Pandawai</span>
+                    <h2>Jejak Langkah di Sumba Timur</h2>
+                    <p>“Melalui Program Bina Karakter, kami mendampingi sekolah-sekolah di Pandawai untuk tidak hanya cerdas secara akademik, tapi kokoh secara moral dan nilai hidup.”</p>
+                    <p>✓ Pendampingan holistik untuk elemen sekolah</p>
+                    <p>✓ Peningkatan keterampilan praktis relevan</p>
+                </div>
+                <div class="grid-2">
+                    <div class="case-image">Foto Kegiatan 1</div>
+                    <div class="case-image" style="margin-top:32px;">Foto Kegiatan 2</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container" style="text-align:center;">
+                <h2>Siap Berkolaborasi?</h2>
+                <p>Buka peluang kemitraan baru untuk pengembangan pendidikan yang berdampak.</p>
+                <a href="contact.html" class="btn btn-primary">Hubungi Kami</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="components.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    new Chart(document.getElementById('clientChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Sekolah Negeri', 'Sekolah Swasta', 'Instansi Pemerintah', 'Mitra CSR'],
+            datasets: [{ data: [45, 30, 15, 10], backgroundColor: ['#1E3A8A', '#3B82F6', '#93C5FD', '#FCD34D'], borderWidth: 0 }]
+        },
+        options: { maintainAspectRatio: false, cutout: '70%', plugins: { legend: { position: 'bottom' } } }
+    });
+
+    new Chart(document.getElementById('growthChart'), {
+        type: 'line',
+        data: {
+            labels: ['2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: 'Guru Dilatih',
+                data: [450, 890, 1420, 2100, 2500],
+                borderColor: '#F59E0B',
+                backgroundColor: 'rgba(245,158,11,.1)',
+                fill: true,
+                tension: .4,
+                pointRadius: 5
+            }]
+        },
+        options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+</script>
+</body>
+</html>
